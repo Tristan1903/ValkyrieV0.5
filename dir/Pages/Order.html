@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../Styles/Order.css" />
+    <link rel="stylesheet" href="../Styles/Navbar.css" />
+    <script src="../Js/NavMenu.js" defer></script>
+    <script src="../Js/order.js" defer></script>
+    <script src="../Js/email.js" defer></script>
+    <link rel="icon" type="image/x-icon" href="../Images/favicon.ico">
+    <title>Place an order</title>
+  </head>
+  <body>
+    <!-- ------------------------------NAVBAR-------------------------------------- -->
+    <nav class="navbar">
+      <div class="brand-title">
+        <img class="logo" src="../Images/Vector.png" />
+      </div>
+      <a href="#" class="toggle-button">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </a>
+      <div class="navbar-links">
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../Pages/About.html">About</a></li>
+          <li><a href="../Pages/Howto.html">How to Order</a></li>
+          <li class="ActiveNav"><a href="#">Order</a></li>
+          <li><a href="../Pages/Gallery.html">Gallery</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="backgroundimage">
+      <img src="../Images/image 4.png" alt="" />
+    </div>
+
+    <!-- ------------------------------BODY-------------------------------------- -->
+    <div class="bodysection">
+      <form
+        class="Orders gform"
+        id="Orders"
+        action="https://script.google.com/macros/s/AKfycbwBjxNN5hVrOiMSa5xFXjFgL8LDpnlOAxEFkk3pEAYAchxsz1dvS6V1VQTnIVGNX_Z3/exec"
+      >
+        <div class="AllInputs">
+          <div class="personaldetails">
+            <h2>Personal Details</h2>
+
+            <!-- ---------------Personal info--------------- -->
+
+            <div class="Persondets">
+              <div class="relative">
+                <input
+                  class="input-cal input-base input"
+                  id="Name"
+                  name="Name"
+                  placeholder=""
+                  type="text"
+                />
+                <label id="label-input">Name</label>
+              </div>
+
+              <div class="relative">
+                <input
+                  class="input-cal input-base input"
+                  id="Surname"
+                  name="Surname"
+                  placeholder=""
+                  type="text"
+                />
+                <label id="label-input">Surname</label>
+              </div>
+
+              <div class="relative">
+                <input
+                  class="input-cal input-base input"
+                  id="PhoneNumber"
+                  name="PhoneNumber"
+                  placeholder=""
+                  type="text"
+                />
+                <label id="label-input">Phone Number</label>
+              </div>
+
+              <div class="relative">
+                <input
+                  class="input-cal input-base input"
+                  id="EmailAddress"
+                  name="Email"
+                  placeholder=""
+                  type="text"
+                />
+                <label id="label-input">Email</label>
+              </div>
+
+              <div class="delcol">
+                <label class="radio-button">
+                  <input
+                    type="radio"
+                    name="DeliveryCollect"
+                    id="DeliveryRadio"
+                    value="Delivery"
+                    onchange="showHideField()"
+                  />
+                  <span class="radio"></span>
+                  Delivery
+                </label>
+
+                <label class="radio-button">
+                  <input
+                    type="radio"
+                    name="DeliveryCollect"
+                    id="CollectRadio"
+                    value="Collection"
+                    onchange="showHideField()"
+                  />
+                  <span class="radio"></span>
+                  Collection
+                </label>
+              </div>
+
+              <div class="relative" id="Deliveryaddres">
+                <input
+                  class="input-cal input-base input"
+                  id="DeliveryAddress"
+                  name="DeliveryAddres"
+                  placeholder=""
+                  type="text"
+                />
+                <label id="label-input">Delivery Location</label>
+              </div>
+
+              <div id="collectionInst">
+                <h4>
+                  Please take note of the following for the collection address
+                </h4>
+                <p>503 33rd Ave</p>
+                <p>Villieria</p>
+                <p>Pretoria</p>
+                <p>0186</p>
+              </div>
+            </div>
+          </div>
+          <div class="OrderDetails">
+            <h2>Order</h2>
+            <div class="ordertype">
+              <label>What would you like to order?</label>
+
+              <select name="OrderType" id="OrderSelect">
+                <option value="" disabled selected>Order Type</option>
+                <option value="Shirts&hoodies">Shirts And Hoodies</option>
+                <option value="Mugs&Cups">Cups, Glasses AND Tumblers</option>
+                <option value="Other">Keychains, Stickers AND Other</option>
+              </select>
+            </div>
+
+            <h3>Order Details</h3>
+
+            <!-- ----------------------------------------Shirts And Hoodies-----------------------------------------------------------------  -->
+
+            <div class="shirts">
+              <div class="Shirt_Hoodies_Box">
+                <div class="Shirt_Hoodies">
+                  <div class="OrderShirt">
+                    <div class="customCheckBoxHolder">
+                      <input
+                        type="checkbox"
+                        id="cCBShrit"
+                        class="customCheckBoxInput"
+                        name="ShirtCheckbox"
+                        value="OrderShirt"
+                      />
+                      <label for="cCBShrit" class="customCheckBoxWrapper">
+                        <div class="customCheckBox">
+                          <div class="inner">Shirt</div>
+                        </div>
+                      </label>
+                    </div>
+
+                    <div class="relative" id="Shirtamount">
+                      <input
+                        class="input-cal input-base input"
+                        id="ShirtAmount"
+                        name="Shirtamount"
+                        placeholder=""
+                        min="0"
+                        max="10"
+                        type="number"
+                        value=""
+                      />
+                      <label id="label-input">Amount</label>
+                    </div>
+                  </div>
+                  <div class="OrderShirt">
+                    <div class="customCheckBoxHolder">
+                      <input
+                        type="checkbox"
+                        id="cCBHoodie"
+                        class="customCheckBoxInput"
+                        name="HoodieCheckbox"
+                        value="OrderHoodie"
+                      />
+                      <label for="cCBHoodie" class="customCheckBoxWrapper">
+                        <div class="customCheckBox">
+                          <div class="inner">Hoodie</div>
+                        </div>
+                      </label>
+                    </div>
+                    <div class="relative" id="Hoodieamount">
+                      <input
+                        class="input-cal input-base input"
+                        id="HoodieAmount"
+                        name="Hoodieamount"
+                        placeholder=""
+                        min="0"
+                        max="10"
+                        type="number"
+                        value=""
+                      />
+                      <label id="label-input">Amount</label>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="ShirtColors">
+                  <label id="descLabel" for="description"
+                    >please specify color of each:</label
+                  >
+                  <textarea
+                    id="description"
+                    name="description"
+                    rows="5"
+                    cols="30"
+                    name="ShirtColors"
+                  ></textarea>
+                </div>
+              </div>
+              <!-- ------------Shirts Image and font------------ -->
+
+              <h3>Image and Font</h3>
+
+              <div class="FontsandImages">
+                <div class="FontInputsHolder">
+                  <div class="customCheckBoxHolder">
+                    <input
+                      type="checkbox"
+                      id="cCBShirtsI"
+                      class="customCheckBoxInput"
+                      name="Shirtsfontselect"
+                      value="ShirtFont"
+                    />
+                    <label for="cCBShirtsI" class="customCheckBoxWrapper">
+                      <div class="customCheckBox">
+                        <div class="inner">Font</div>
+                      </div>
+                    </label>
+                  </div>
+                  <div class="FontInputs">
+                    <div class="relative" id="ShirtFontName">
+                      <input
+                        class="input-cal input-base input"
+                        id="FontType"
+                        name="ShirtFontName"
+                        placeholder=""
+                        type="text"
+                      />
+                      <label id="label-input">Font Name</label>
+                    </div>
+
+                    <div class="relative" id="ShirtFontSize">
+                      <input
+                        class="input-cal input-base input"
+                        id="FontSize"
+                        name="ShirtFontSize"
+                        placeholder=""
+                        type="text"
+                      />
+                      <label id="label-input">Font Size</label>
+                    </div>
+                  </div>
+                </div>
+                <div class="ImageHolder">
+                  <div class="customCheckBoxHolder">
+                    <input
+                      type="checkbox"
+                      id="cCBShirtsF"
+                      class="customCheckBoxInput"
+                      name="imageselect"
+                      value="ShirtImage"
+                    />
+                    <label for="cCBShirtsF" class="customCheckBoxWrapper">
+                      <div class="customCheckBox">
+                        <div class="inner">Image</div>
+                      </div>
+                    </label>
+                  </div>
+                  <!-- <div class="imageitems">
+              <div id="ShirtImageUpload">
+                <label> Image </label>
+                <input type="file" id="fileUpload" name="images[]" multiple />
+              </div> -->
+                  <div id="ShirtImageDetails">
+                    <label id="descLabel" for="Shirtimagedetails"
+                      >Please note currently no upload available, please forward
+                      all images to valkyriethread@gmail.com <br />
+                      Please describe the size and location of the image:</label
+                    >
+                    <textarea
+                      id="description"
+                      name="Shirtimagedetails"
+                      rows="5"
+                      cols="30"
+                      name="ShirtImageDesc"
+                    ></textarea>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- ----------------------------------------Glasses, Mugs & Tumblers----------------------------------------------------------------  -->
+
+            <div class="Drinkware">
+              <div class="Glasses_Mugs_Tumblers">
+                <div class="OrderGlasses">
+                  <div class="customCheckBoxHolder">
+                    <input
+                      type="checkbox"
+                      name="SelectGlas"
+                      id="cCBGlas"
+                      class="customCheckBoxInput"
+                      value="OrderGlass"
+                    />
+                    <label for="cCBGlas" class="customCheckBoxWrapper">
+                      <div class="customCheckBox">
+                        <div class="inner">Glas</div>
+                      </div>
+                    </label>
+                  </div>
+
+                  <div class="relative" id="GlasAmount">
+                    <input
+                      class="input-cal input-base input"
+                      id="GlassesAmount"
+                      name="GlassesAmount"
+                      placeholder=""
+                      min="0"
+                      max="10"
+                      type="number"
+                      value=""
+                    />
+                    <label id="label-input">Amount</label>
+                  </div>
+                </div>
+
+                <div class="OrderMug">
+                  <div class="customCheckBoxHolder">
+                    <input
+                      type="checkbox"
+                      id="cCBMug"
+                      name="Selectmug"
+                      class="customCheckBoxInput"
+                      value="OrderMug"
+                    />
+                    <label for="cCBMug" class="customCheckBoxWrapper">
+                      <div class="customCheckBox">
+                        <div class="inner">Mug</div>
+                      </div>
+                    </label>
+                  </div>
+
+                  <div class="relative" id="MugAmount">
+                    <input
+                      class="input-cal input-base input"
+                      id="MugsAmount"
+                      name="MugsAmount"
+                      placeholder=""
+                      min="0"
+                      max="10"
+                      type="number"
+                      value=""
+                    />
+                    <label id="label-input">Amount</label>
+                  </div>
+                </div>
+
+                <div class="OrderTumbler">
+                  <div class="customCheckBoxHolder">
+                    <input
+                      type="checkbox"
+                      id="cCBTumbler"
+                      name="selectTumbler"
+                      class="customCheckBoxInput"
+                      value="OrderTumbler"
+                    />
+                    <label for="cCBTumbler" class="customCheckBoxWrapper">
+                      <div class="customCheckBox">
+                        <div class="inner">Tumbler</div>
+                      </div>
+                    </label>
+                  </div>
+
+                  <div class="relative" id="TumblerAmount">
+                    <input
+                      class="input-cal input-base input"
+                      id="TumblersAmount"
+                      name="TumblersAmount"
+                      placeholder=""
+                      min="0"
+                      max="10"
+                      type="number"
+                      value=""
+                    />
+                    <label id="label-input">Amount</label>
+                  </div>
+                </div>
+              </div>
+              <!-- ------------Drinkware font and image------------ -->
+              <h3>Image and Font</h3>
+              <div class="FontsandImages">
+                <div class="FontInputsHolder">
+                  <div class="customCheckBoxHolder">
+                    <input
+                      type="checkbox"
+                      id="cCBDF"
+                      name="CheckboxDrinkFont"
+                      class="customCheckBoxInput"
+                      value="DrinkwareText"
+                    />
+                    <label for="cCBDF" class="customCheckBoxWrapper">
+                      <div class="customCheckBox">
+                        <div class="inner">Font</div>
+                      </div>
+                    </label>
+                  </div>
+
+                  <div class="FontInputs">
+                    <div class="relative" id="DWFontName">
+                      <input
+                        class="input-cal input-base input"
+                        id="DrinkwareFontName"
+                        name="DrinkwareFontName"
+                        placeholder=""
+                        type="text"
+                      />
+                      <label id="label-input">Font Name</label>
+                    </div>
+
+                    <div class="relative" id="DWFontSize">
+                      <input
+                        class="input-cal input-base input"
+                        id="DrinkwareFontSize"
+                        name="DrinkwareFontSize"
+                        placeholder=""
+                        type="text"
+                      />
+                      <label id="label-input">Font Name</label>
+                    </div>
+                  </div>
+                </div>
+                <div class="ImageHolder">
+                  <div class="customCheckBoxHolder">
+                    <input
+                      type="checkbox"
+                      name="CheckboxDrinkImage"
+                      id="cCBDI"
+                      value="DrinkwareImage"
+                      class="customCheckBoxInput"
+                    />
+                    <label for="cCBDI" class="customCheckBoxWrapper">
+                      <div class="customCheckBox">
+                        <div class="inner">Image</div>
+                      </div>
+                    </label>
+                  </div>
+                  <div class="imageitems">
+                    <div id="DrinkWareImageUpload">
+                      <!-- <label> Image </label>
+              <input
+                type="file"
+                id="DrinkWarefileUpload"
+                name="DrinkWarefiles[]"
+                multiple
+              />
+            </div> -->
+                      <div id="DrinkWareImageDetails">
+                        <label id="DrinkWaredescLabel" for="description"
+                          >Please note currently no upload available, please
+                          forward all images to valkyriethread@gmail.com <br />
+                          Please describe the size and location of the
+                          image:</label
+                        >
+                        <textarea
+                          id="DrinkWaredescription"
+                          name="DrinkWaredescription"
+                          rows="5"
+                          cols="30"
+                        ></textarea>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- ----------------------------------------Other----------------------------------------------------------------  -->
+
+            <div class="other">
+              <p>
+                Please list in the section below what other service you are
+                looking for, aswell as any custom designs for all other sections
+              </p>
+              <!-- <div id="DrinkWareImageUpload">
+              <label> File </label>
+              <input
+                type="file"
+                id="DrinkWarefileUpload"
+                name="DrinkWarefiles[]"
+                multiple
+              />
+            </div> -->
+              <div id="DrinkWareImageDetails">
+                <label id="DrinkWaredescLabel" for="description"
+                  >Please note currently no upload available, please forward all
+                  images to valkyriethread@gmail.com <br />
+                  Please describe the size and location of all relevant
+                  information:</label
+                >
+                <textarea
+                  id="DrinkWaredescription"
+                  name="Otherdescription"
+                  rows="5"
+                  cols="30"
+                ></textarea>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button type="submit" class="submit" id="submit">Request Quote</button>
+      </form>
+    </div>
+    <script
+      data-cfasync="false"
+      src="../Js/form-submission-handler.js"
+    ></script>
+  </body>
+</html>
